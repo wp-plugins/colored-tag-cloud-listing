@@ -157,10 +157,16 @@ The Parameters tab also contains sample shortcode and PHP code.
 
 == Changelog ==
 
+= 0.0.2 =
+- admin CSS and page updates
+
 = 0.0.1 =
 created
 
 == Upgrade Notice ==
+
+= 0.0.2 =
+- admin CSS and page updates
 
 = 0.0.1 =
 created
