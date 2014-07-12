@@ -3,15 +3,15 @@
 Plugin Name: Colored Tag Cloud Listing
 Plugin URI: http://www.jimmyscode.com/wordpress/colored-tag-cloud-listing/
 Description: Display a tag cloud on your site.
-Version: 0.0.1
+Version: 0.0.3
 Author: Jimmy Pe&ntilde;a
 Author URI: http://www.jimmyscode.com/
 License: GPLv2 or later
 */
-
+if (!defined('JPCTCL_PLUGIN_NAME')) {
 	// plugin constants
 	define('JPCTCL_PLUGIN_NAME', 'Colored Tag Cloud Listing');
-	define('JPCTCL_VERSION', '0.0.1');
+	define('JPCTCL_VERSION', '0.0.3');
 	define('JPCTCL_SLUG', 'colored-tag-cloud-listing');
 	define('JPCTCL_LOCAL', 'jpctcl');
 	define('JPCTCL_OPTION', 'jpctcl');
@@ -29,7 +29,7 @@ License: GPLv2 or later
 	define('JPCTCL_DEFAULT_STYLE_NAME', 'cssclass');
 	define('JPCTCL_DEFAULT_NOFOLLOW_NAME', 'nofollow');
 	define('JPCTCL_DEFAULT_SHOW_NAME', 'show');
-	
+}
 	// oh no you don't
 	if (!defined('ABSPATH')) {
 		wp_die(__('Do not access this file directly.', jpctcl_get_local()));
@@ -75,7 +75,7 @@ License: GPLv2 or later
 		}
 		?>
 		<div class="wrap">
-			<h2 id="plugintitle"><img src="<?php echo plugins_url(jpctcl_get_path() . '/images/cloud.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php echo JPCTCL_PLUGIN_NAME; ?> by <a href="http://www.jimmyscode.com/">Jimmy Pe&ntilde;a</a></h2>
+			<h2 id="plugintitle"><img src="<?php echo jpctcl_getimagefilename('cloud.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php echo JPCTCL_PLUGIN_NAME; ?> by <a href="http://www.jimmyscode.com/">Jimmy Pe&ntilde;a</a></h2>
 			<div>You are running plugin version <strong><?php echo JPCTCL_VERSION; ?></strong>.</div>
 			
 			<?php /* http://code.tutsplus.com/tutorials/the-complete-guide-to-the-wordpress-settings-api-part-5-tabbed-navigation-for-your-settings-page--wp-24971 */ ?>
@@ -91,7 +91,7 @@ License: GPLv2 or later
 			<?php $options = jpctcl_getpluginoptions(); ?>
 			<?php update_option(jpctcl_get_option(), $options); ?>
 			<?php if ($active_tab == 'settings') { ?>
-			<h3 id="settings"><img src="<?php echo plugins_url(jpctcl_get_path() . '/images/settings.png'); ?>" title="" alt="" height="61" width="64" align="absmiddle" /> <?php _e('Plugin Settings', jpctcl_get_local()); ?></h3>
+			<h3 id="settings"><img src="<?php echo jpctcl_getimagefilename('settings.png'); ?>" title="" alt="" height="61" width="64" align="absmiddle" /> <?php _e('Plugin Settings', jpctcl_get_local()); ?></h3>
 				<table class="form-table" id="theme-options-wrap">
 					<tr valign="top"><th scope="row"><strong><label title="<?php _e('Is plugin enabled? Uncheck this to turn it off temporarily.', jpctcl_get_local()); ?>" for="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_ENABLED_NAME; ?>]"><?php _e('Plugin enabled?', jpctcl_get_local()); ?></label></strong></th>
 						<td><input type="checkbox" id="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_ENABLED_NAME; ?>]" name="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_ENABLED_NAME; ?>]" value="1" <?php checked('1', jpctcl_checkifset(JPCTCL_DEFAULT_ENABLED_NAME, JPCTCL_DEFAULT_ENABLED, $options)); ?> /></td>
@@ -114,14 +114,14 @@ License: GPLv2 or later
 				</table>
 				<?php submit_button(); ?>
 			<?php } elseif ($active_tab == 'parameters') { ?>
-			<h3 id="parameters"><img src="<?php echo plugins_url(jpctcl_get_path() . '/images/parameters.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Plugin Parameters and Default Values', jpctcl_get_local()); ?></h3>
+			<h3 id="parameters"><img src="<?php echo jpctcl_getimagefilename('parameters.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Plugin Parameters and Default Values', jpctcl_get_local()); ?></h3>
 			These are the parameters for using the shortcode, or calling the plugin from your PHP code.
 			
 			For available colors, see the dropdown list on the Settings tab.
 
 			<?php echo jpctcl_parameters_table(jpctcl_get_local(), jpctcl_shortcode_defaults(), jpctcl_required_parameters()); ?>			
 
-			<h3 id="examples"><img src="<?php echo plugins_url(jpctcl_get_path() . '/images/examples.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Shortcode and PHP Examples', jpctcl_get_local()); ?></h3>
+			<h3 id="examples"><img src="<?php echo jpctcl_getimagefilename('examples.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Shortcode and PHP Examples', jpctcl_get_local()); ?></h3>
 			<h4><?php _e('Shortcode Format:', jpctcl_get_local()); ?></h4>
 			<?php echo '<pre style="background:#FFF">' . JPCTCL_get_example_shortcode('standout-css3-button', jpctcl_shortcode_defaults(), jpctcl_get_local()) . 'Content goes here[/standout-css3-button]</pre>'; ?>
 
@@ -129,7 +129,7 @@ License: GPLv2 or later
 			<?php echo jpctcl_get_example_php_code('colored-tag-cloud', 'jpctcl', jpctcl_shortcode_defaults()); ?>
 			<?php _e('<small>Note: \'show\' is false by default; set it to <strong>true</strong> echo the output, or <strong>false</strong> to return the output to your PHP code.</small>', jpctcl_get_local()); ?>
 			<?php } else { ?>
-			<h3 id="support"><img src="<?php echo plugins_url(jpctcl_get_path() . '/images/support.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Support', jpctcl_get_local()); ?></h3>
+			<h3 id="support"><img src="<?php echo jpctcl_getimagefilename('support.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Support', jpctcl_get_local()); ?></h3>
 				<div class="support">
 				<?php echo jpctcl_getsupportinfo(jpctcl_get_slug(), jpctcl_get_local()); ?>
 				</div>
@@ -480,6 +480,9 @@ License: GPLv2 or later
 		return $output;	
 	}
 	function jpctcl_checkifset($optionname, $optiondefault, $optionsarr) {
-		return (!empty($optionsarr[$optionname]) ? $optionsarr[$optionname] : $optiondefault);
+		return (isset($optionsarr[$optionname]) ? $optionsarr[$optionname] : $optiondefault);
+	}
+	function jpctcl_getimagefilename($fname = '') {
+		return plugins_url(jpctcl_get_path() . '/images/' . $fname);
 	}
 ?>

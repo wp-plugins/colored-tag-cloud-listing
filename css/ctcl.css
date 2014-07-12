@@ -1,34 +1,19 @@
-.tagbox { 
-	background-color: #eee;
-	border: 1px solid #ccc;
-	margin:0px 10px 10px 0px;
-	line-height: 200%;
-	padding: 2px 0 2px 2px;
-}
-.taglink {
-	padding: 2px;
-}
-.tagbox a, .tagbox a:visited, .tagbox a:active { 
-	text-decoration: none
-}
-.tagcount {
-	color:white;
-	position: relative;
-	padding: 2px;
-}
-.tagcount-green { background-color:green }
-.tagcount-blue { background-color:blue }
-.tagcount-yellow { background-color:yellow }
-.tagcount-orange { background-color:orange }
-.tagcount-red { background-color:red }
-.tagcount-purple { background-color:purple }
-.tagcount-aqua { background-color:aqua }
-.tagcount-black { background-color:black }
-.tagcount-fuschia { background-color:fuschia }
-.tagcount-gray { background-color:gray }
-.tagcount-lime { background-color:lime }
-.tagcount-maroon { background-color:maroon }
-.tagcount-navy { background-color:navy }
-.tagcount-olive { background-color:olive }
-.tagcount-silver { background-color:silver }
-.tagcount-teal { background-color:teal }
+.tagbox{background-color:#eee;border:1px solid #ccc;line-height:200%;margin:0 10px 10px 0;padding:2px 0 2px 2px}
+.taglink{padding:2px}
+.tagbox a,.tagbox a:visited,.tagbox a:active{text-decoration:none}
+.tagcount{color:#FFF;position:relative;padding:2px}
+.tagcount-green{background-color:green}
+.tagcount-blue{background-color:blue}
+.tagcount-yellow{background-color:#FF0}
+.tagcount-orange{background-color:orange}
+.tagcount-red{background-color:red}
+.tagcount-purple{background-color:purple}
+.tagcount-aqua{background-color:aqua}
+.tagcount-black{background-color:#000}
+.tagcount-gray{background-color:gray}
+.tagcount-lime{background-color:lime}
+.tagcount-maroon{background-color:maroon}
+.tagcount-navy{background-color:navy}
+.tagcount-olive{background-color:olive}
+.tagcount-silver{background-color:silver}
+.tagcount-teal{background-color:teal}

@@ -157,6 +157,9 @@ The Parameters tab also contains sample shortcode and PHP code.
 
 == Changelog ==
 
+= 0.0.3 =
+- compressed CSS, removed fuschia color (no such color)
+
 = 0.0.2 =
 - admin CSS and page updates
 
@@ -164,6 +167,9 @@ The Parameters tab also contains sample shortcode and PHP code.
 created
 
 == Upgrade Notice ==
+
+= 0.0.3 =
+- compressed CSS, removed fuschia color (no such color)
 
 = 0.0.2 =
 - admin CSS and page updates
