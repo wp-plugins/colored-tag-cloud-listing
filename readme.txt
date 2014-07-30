@@ -84,7 +84,6 @@ The following styles are available.
 <li>purple</li>
 <li>aqua</li>
 <li>black</li>
-<li>fuschia</li>
 <li>gray</li>
 <li>lime</li>
 <li>maroon</li>
@@ -157,6 +156,9 @@ The Parameters tab also contains sample shortcode and PHP code.
 
 == Changelog ==
 
+= 0.0.4 =
+- fixed validation issue
+
 = 0.0.3 =
 - compressed CSS, removed fuschia color (no such color)
 
@@ -167,6 +169,9 @@ The Parameters tab also contains sample shortcode and PHP code.
 created
 
 == Upgrade Notice ==
+
+= 0.0.4 =
+- fixed validation issue
 
 = 0.0.3 =
 - compressed CSS, removed fuschia color (no such color)

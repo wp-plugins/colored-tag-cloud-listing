@@ -3,7 +3,7 @@
 Plugin Name: Colored Tag Cloud Listing
 Plugin URI: http://www.jimmyscode.com/wordpress/colored-tag-cloud-listing/
 Description: Display a tag cloud on your site.
-Version: 0.0.3
+Version: 0.0.4
 Author: Jimmy Pe&ntilde;a
 Author URI: http://www.jimmyscode.com/
 License: GPLv2 or later
@@ -11,7 +11,7 @@ License: GPLv2 or later
 if (!defined('JPCTCL_PLUGIN_NAME')) {
 	// plugin constants
 	define('JPCTCL_PLUGIN_NAME', 'Colored Tag Cloud Listing');
-	define('JPCTCL_VERSION', '0.0.3');
+	define('JPCTCL_VERSION', '0.0.4');
 	define('JPCTCL_SLUG', 'colored-tag-cloud-listing');
 	define('JPCTCL_LOCAL', 'jpctcl');
 	define('JPCTCL_OPTION', 'jpctcl');
@@ -79,7 +79,7 @@ if (!defined('JPCTCL_PLUGIN_NAME')) {
 			<div>You are running plugin version <strong><?php echo JPCTCL_VERSION; ?></strong>.</div>
 			
 			<?php /* http://code.tutsplus.com/tutorials/the-complete-guide-to-the-wordpress-settings-api-part-5-tabbed-navigation-for-your-settings-page--wp-24971 */ ?>
-			<?php $active_tab = (!empty($_GET['tab']) ? $_GET['tab'] : 'settings'); ?>
+			<?php $active_tab = (isset($_GET['tab']) ? $_GET['tab'] : 'settings'); ?>
 			<h2 class="nav-tab-wrapper">
 			  <a href="?page=<?php echo jpctcl_get_slug(); ?>&tab=settings" class="nav-tab <?php echo $active_tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Settings', jpctcl_get_local()); ?></a>
 				<a href="?page=<?php echo jpctcl_get_slug(); ?>&tab=parameters" class="nav-tab <?php echo $active_tab == 'parameters' ? 'nav-tab-active' : ''; ?>"><?php _e('Parameters', jpctcl_get_local()); ?></a>
@@ -209,7 +209,7 @@ if (!defined('JPCTCL_PLUGIN_NAME')) {
 		global $pagenow;
 		if (current_user_can(JPCTCL_PERMISSIONS_LEVEL)) { // user has privilege
 			if ($pagenow == 'options-general.php') { // we are on Settings page
-				if (!empty($_GET['page'])) {
+				if (isset($_GET['page'])) {
 					if ($_GET['page'] == jpctcl_get_slug()) { // we are on this plugin's settings page
 						$options = jpctcl_getpluginoptions();
 						if ($options != false) {
@@ -233,7 +233,7 @@ if (!defined('JPCTCL_PLUGIN_NAME')) {
 		global $pagenow;
 		if (current_user_can(JPCTCL_PERMISSIONS_LEVEL)) { // user has privilege
 			if ($pagenow == 'options-general.php') {
-				if (!empty($_GET['page'])) {
+				if (isset($_GET['page'])) {
 					if ($_GET['page'] == jpctcl_get_slug()) { // we are on this plugin's settings page
 						jpctcl_admin_styles();
 					}
