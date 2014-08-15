@@ -3,7 +3,7 @@
 Plugin Name: Colored Tag Cloud Listing
 Plugin URI: http://www.jimmyscode.com/wordpress/colored-tag-cloud-listing/
 Description: Display a tag cloud on your site.
-Version: 0.0.4
+Version: 0.0.5
 Author: Jimmy Pe&ntilde;a
 Author URI: http://www.jimmyscode.com/
 License: GPLv2 or later
@@ -11,7 +11,7 @@ License: GPLv2 or later
 if (!defined('JPCTCL_PLUGIN_NAME')) {
 	// plugin constants
 	define('JPCTCL_PLUGIN_NAME', 'Colored Tag Cloud Listing');
-	define('JPCTCL_VERSION', '0.0.4');
+	define('JPCTCL_VERSION', '0.0.5');
 	define('JPCTCL_SLUG', 'colored-tag-cloud-listing');
 	define('JPCTCL_LOCAL', 'jpctcl');
 	define('JPCTCL_OPTION', 'jpctcl');

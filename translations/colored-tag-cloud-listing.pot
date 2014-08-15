@@ -1,0 +1,238 @@
+# Copyright (C) 2014 Colored Tag Cloud Listing
+# This file is distributed under the same license as the Colored Tag Cloud Listing package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Colored Tag Cloud Listing 0.0.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/colored-tag-cloud-listing\n"
+"POT-Creation-Date: 2014-08-14 16:35:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: colored-tag-cloud-listing.php:35
+msgid "Do not access this file directly."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:74
+msgid "You do not have sufficient permission to access this page"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:84
+msgid "Settings"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:85
+msgid "Parameters"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:86 colored-tag-cloud-listing.php:132
+msgid "Support"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:94
+msgid "Plugin Settings"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:96 colored-tag-cloud-listing.php:99
+msgid "Is plugin enabled? Uncheck this to turn it off temporarily."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:96
+msgid "Plugin enabled?"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:100
+msgid "Select the style you would like to use as the default."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:100
+msgid "Default style"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:109
+msgid ""
+"Select the style you would like to use as the default if no style is "
+"otherwise specified."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:110
+msgid "Check this box to add rel=nofollow to button links."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:110
+msgid "Nofollow button link?"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:113
+msgid ""
+"Check this box to add rel=\"nofollow\" to button links. You can override "
+"this at the shortcode level."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:117
+msgid "Plugin Parameters and Default Values"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:124
+msgid "Shortcode and PHP Examples"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:125
+msgid "Shortcode Format:"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:128
+msgid "PHP Format:"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:130
+msgid ""
+"<small>Note: 'show' is false by default; set it to <strong>true</strong> "
+"echo the output, or <strong>false</strong> to return the output to your PHP "
+"code.</small>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:218
+msgid "is currently disabled."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:222
+msgid "Please confirm the default CSS style and click \"Save\"."
+msgstr ""
+
+#: colored-tag-cloud-listing.php:257
+msgid "<a href=\"http://wordpress.org/support/plugin/%s\">Support</a>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:258 colored-tag-cloud-listing.php:362
+msgid "<a href=\"http://wordpress.org/extend/plugins/%s/\">Documentation</a>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:259
+msgid "<a href=\"http://wordpress.org/plugins/%s/faq/\">FAQ</a>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:346
+msgid "<a href=\"options-general.php?page=%s\">Settings</a>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:360
+msgid "Do you need help with this plugin? Check out the following resources:"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:363
+msgid "<a href=\"http://wordpress.org/plugins/%s/faq/\">FAQ</a><br />"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:364
+msgid ""
+"<a href=\"http://wordpress.org/support/plugin/%s\">Support Forum</a><br />"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:365
+msgid ""
+"<a href=\"http://www.jimmyscode.com/wordpress/%s\">Plugin Homepage / Demo</"
+"a><br />"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:366
+msgid ""
+"<a href=\"http://wordpress.org/extend/plugins/%s/developers/\">Development</"
+"a><br />"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:367
+msgid ""
+"<a href=\"http://wordpress.org/plugins/%s/changelog/\">Changelog</a><br />"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:370
+msgid ""
+"If you like this plugin, please <a href=\"http://wordpress.org/support/view/"
+"plugin-reviews/%s/\">rate it on WordPress.org</a>"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:371
+msgid ""
+" and click the <a href=\"http://wordpress.org/plugins/%s/#compatibility"
+"\">Works</a> button. "
+msgstr ""
+
+#: colored-tag-cloud-listing.php:373
+msgid "Your donations encourage further development and support. "
+msgstr ""
+
+#: colored-tag-cloud-listing.php:382
+msgid "The name of the parameter"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:382
+msgid "Parameter Name"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:383
+msgid "Is this parameter required?"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:383
+msgid "Is Required?"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:384
+msgid "What data type this parameter accepts"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:384
+msgid "Data Type"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:385
+msgid "What, if any, is the default if no value is specified"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:385
+msgid "Default Value"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:399
+msgid "Yes"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:402
+msgid "No"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:411
+msgid "true"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:414
+msgid "false"
+msgstr ""
+
+#: colored-tag-cloud-listing.php:417
+msgid "this value is blank by default"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Colored Tag Cloud Listing"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.jimmyscode.com/wordpress/colored-tag-cloud-listing/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Display a tag cloud on your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jimmy Pe&ntilde;a"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.jimmyscode.com/"
+msgstr ""
