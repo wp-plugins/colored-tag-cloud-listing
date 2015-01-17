@@ -3,7 +3,7 @@
 Plugin Name: Colored Tag Cloud Listing
 Plugin URI: http://www.jimmyscode.com/wordpress/colored-tag-cloud-listing/
 Description: Display a tag cloud on your site.
-Version: 0.0.5
+Version: 0.0.6
 Author: Jimmy Pe&ntilde;a
 Author URI: http://www.jimmyscode.com/
 License: GPLv2 or later
@@ -11,7 +11,7 @@ License: GPLv2 or later
 if (!defined('JPCTCL_PLUGIN_NAME')) {
 	// plugin constants
 	define('JPCTCL_PLUGIN_NAME', 'Colored Tag Cloud Listing');
-	define('JPCTCL_VERSION', '0.0.5');
+	define('JPCTCL_VERSION', '0.0.6');
 	define('JPCTCL_SLUG', 'colored-tag-cloud-listing');
 	define('JPCTCL_LOCAL', 'jpctcl');
 	define('JPCTCL_OPTION', 'jpctcl');
@@ -107,10 +107,10 @@ if (!defined('JPCTCL_PLUGIN_NAME')) {
 						</select></td>
 					</tr>
 					<tr valign="top"><td colspan="2"><?php _e('Select the style you would like to use as the default if no style is otherwise specified.', jpctcl_get_local()); ?></td></tr>
-					<tr valign="top"><th scope="row"><strong><label title="<?php _e('Check this box to add rel=nofollow to button links.', jpctcl_get_local()); ?>" for="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_NOFOLLOW_NAME; ?>]"><?php _e('Nofollow button link?', jpctcl_get_local()); ?></label></strong></th>
+					<tr valign="top"><th scope="row"><strong><label title="<?php _e('Check this box to add rel=nofollow to tag cloud links.', jpctcl_get_local()); ?>" for="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_NOFOLLOW_NAME; ?>]"><?php _e('Nofollow button link?', jpctcl_get_local()); ?></label></strong></th>
 						<td><input type="checkbox" id="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_NOFOLLOW_NAME; ?>]" name="<?php echo jpctcl_get_option(); ?>[<?php echo JPCTCL_DEFAULT_NOFOLLOW_NAME; ?>]" value="1" <?php checked('1', jpctcl_checkifset(JPCTCL_DEFAULT_NOFOLLOW_NAME, JPCTCL_DEFAULT_NOFOLLOW, $options)); ?> /></td>
 					</tr>
-					<tr valign="top"><td colspan="2"><?php _e('Check this box to add rel="nofollow" to button links. You can override this at the shortcode level.', jpctcl_get_local()); ?></td></tr>
+					<tr valign="top"><td colspan="2"><?php _e('Check this box to add rel="nofollow" to tag cloud links. You can override this at the shortcode level.', jpctcl_get_local()); ?></td></tr>
 				</table>
 				<?php submit_button(); ?>
 			<?php } elseif ($active_tab == 'parameters') { ?>
@@ -123,7 +123,7 @@ if (!defined('JPCTCL_PLUGIN_NAME')) {
 
 			<h3 id="examples"><img src="<?php echo jpctcl_getimagefilename('examples.png'); ?>" title="" alt="" height="64" width="64" align="absmiddle" /> <?php _e('Shortcode and PHP Examples', jpctcl_get_local()); ?></h3>
 			<h4><?php _e('Shortcode Format:', jpctcl_get_local()); ?></h4>
-			<?php echo '<pre style="background:#FFF">' . JPCTCL_get_example_shortcode('standout-css3-button', jpctcl_shortcode_defaults(), jpctcl_get_local()) . 'Content goes here[/standout-css3-button]</pre>'; ?>
+			<?php echo '<pre style="background:#FFF">' . jpctcl_get_example_shortcode('colored-tag-cloud', jpctcl_shortcode_defaults(), jpctcl_get_local()) . '</pre>'; ?>
 
 			<h4><?php _e('PHP Format:', jpctcl_get_local()); ?></h4>
 			<?php echo jpctcl_get_example_php_code('colored-tag-cloud', 'jpctcl', jpctcl_shortcode_defaults()); ?>
